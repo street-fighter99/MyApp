@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <array name="bloodgroup">
+        <item>O Positive(O+)</item>
+        <item>O Negative(O-)</item>
+        <item>A Positive(A+)</item>
+        <item>A Negative(A-)</item>
+        <item>B Positive(B+)</item>
+        <item>B Negative(B-)</item>
+    </array>
+</resources>

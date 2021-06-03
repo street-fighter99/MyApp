@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Category"
+    android:orientation="vertical"
+  >
+
+    <GridLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/BloodBamk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_margin="20dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="#FFABAB"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/blood"
+                android:layout_gravity="center"
+                android:padding="15dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_margin="20dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="#ABE8FF">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/agenda"
+                android:layout_gravity="center"
+                android:padding="15dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Downloads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_margin="20dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="#FFEBAB">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder"
+                android:layout_gravity="center"
+                android:padding="15dp"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal">
+        <TextView
+            android:text="BloodBank"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="Contacts"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="Downloads"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:textColor="@color/black"/>
+
+
+    </GridLayout>
+
+
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_margin="20dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="#ABFFC4"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/map"
+                android:layout_gravity="center"
+                android:padding="15dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_margin="20dp"
+            android:layout_columnWeight="1"
+            app:cardBackgroundColor="#DBABFF"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/taxi"
+                android:layout_gravity="center"
+                android:padding="15dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Maps"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="Maps"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:textColor="@color/black"/>
+
+
+    </GridLayout>
+
+</LinearLayout>

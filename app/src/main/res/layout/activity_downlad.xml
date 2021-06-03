@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Downlad"
+    android:orientation="vertical"
+    android:background="#FFEBAB">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/downloadtitle"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Search"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxBackgroundColor="#fff"
+            app:boxCornerRadiusTopEnd="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/search"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="20dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/downrecycler"
+            android:layout_margin="10dp"
+        />
+
+
+    </LinearLayout>
+<com.getbase.floatingactionbutton.FloatingActionsMenu
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:fab_labelsPosition="left"
+    app:fab_labelStyle="@style/LabelStyle"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true">
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchDown"
+        app:fab_colorNormal="#fff"
+        app:fab_title="Filter"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/search"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddDownload"
+        app:fab_colorNormal="@color/white"
+        app:fab_title="Add File"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/addperson"/>
+
+</com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

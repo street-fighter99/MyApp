@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="10dp"
+    android:padding="10dp"
+    android:layout_margin="6dp"
+    android:id="@+id/cardV">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_margin="-2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:fontFamily="@font/javatext"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:fontFamily="@font/javatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy name"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:textSize="17sp"
+                android:id="@+id/NameFromDatabase"
+                android:layout_marginLeft="10dp" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="-2dp">
+
+            <TextView
+                android:fontFamily="@font/javatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone : "
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:fontFamily="@font/javatext"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dummy phone"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textSize="17sp"
+                android:id="@+id/PhoneNumberFromDatabase"
+                android:layout_marginLeft="10dp" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="-2dp">
+
+            <TextView
+                android:fontFamily="@font/javatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Group :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_margin="10dp"/>
+
+            <TextView
+
+                android:id="@+id/BloodTypeFromDatabase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/javatext"
+                android:text="dummy Blood Type"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
