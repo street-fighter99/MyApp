@@ -8,6 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,8 +18,9 @@ import com.example.myapplication.Models.DownModel;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class DownAdapter extends RecyclerView.Adapter<DownAdapter.holder> implements Filterable
+public class DownAdapter extends RecyclerView.Adapter<DownAdapter.holder>
 
 {
     private ArrayList<DownModel> dList;
@@ -28,7 +30,7 @@ public class DownAdapter extends RecyclerView.Adapter<DownAdapter.holder> implem
     public DownAdapter(ArrayList<DownModel> dList, Context context) {
         this.dList = dList;
         this.context = context;
-        this.backup=new ArrayList<>(dList);
+        backup=new ArrayList<>(dList);
     }
 
     @NonNull
@@ -55,56 +57,18 @@ public class DownAdapter extends RecyclerView.Adapter<DownAdapter.holder> implem
     @Override
     public int getItemCount() {
         return dList.size();
+
     }
 
-    @Override
-    public Filter getFilter() {
 
 
-        return filter;
+
+    public void updatelist(ArrayList<DownModel> temp) {
+        System.out.println(temp);
+        dList=temp;
+
+        notifyDataSetChanged();
     }
-
-    private Filter filter =new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence keyword) {
-
-            ArrayList<DownModel> filtereddata=new ArrayList<>();
-
-            if (keyword.toString().isEmpty() || keyword.length()==0){
-
-                filtereddata.addAll(backup);
-
-            }else{
-                for (DownModel obj:backup){
-
-                    if (obj.getName().toLowerCase().contains(keyword.toString().toLowerCase())){
-
-
-                        filtereddata.add(obj);
-
-                    }
-
-
-                }
-
-
-
-            }
-            FilterResults results=new FilterResults();
-            results.values=filtereddata;
-            return results;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            dList.clear();
-            dList.addAll((ArrayList<DownModel>)results.values);
-             notifyDataSetChanged();
-
-
-
-        }
-    };
 
     class holder extends RecyclerView.ViewHolder
     {

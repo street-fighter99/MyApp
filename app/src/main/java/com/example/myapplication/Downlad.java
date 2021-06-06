@@ -66,8 +66,9 @@ public class Downlad extends AppCompatActivity {
 
     Button UploadBttn;
     FloatingActionButton AddApplication,sear;
-    EditText ApplicationName1,ApplicationDescription1;
+    EditText ApplicationName1,ApplicationDescription1,searchbar;
     ImageView ApplicationImage;
+
 
     Bitmap bitmap;
     Uri filePath;
@@ -79,6 +80,8 @@ public class Downlad extends AppCompatActivity {
     DatabaseReference dReference=rootNode.getReference().child("Application");
     DownAdapter adapter;
     ArrayList<DownModel> list;
+
+
 
 
 
@@ -102,6 +105,7 @@ public class Downlad extends AppCompatActivity {
         DRcl.setAdapter(adapter);
 
 
+
         dReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -114,6 +118,7 @@ public class Downlad extends AppCompatActivity {
 
                 adapter.notifyDataSetChanged();
 
+
             }
 
             @Override
@@ -121,6 +126,11 @@ public class Downlad extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
 
         AddApplication.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,10 +142,30 @@ public class Downlad extends AppCompatActivity {
 
 
 
+        searchbar=findViewById(R.id.searchBar);
+        searchbar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+
+
+            }
+        });
+
+
 
 
     }
-
 
 
 
@@ -292,7 +322,7 @@ public class Downlad extends AppCompatActivity {
 
 
 
-    @Override
+   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mainmenu,menu);
         MenuItem menuItem=menu.findItem(R.id.searchmenu);
@@ -302,18 +332,42 @@ public class Downlad extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                adapter.getFilter().filter(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
 
-                adapter.getFilter().filter(newText);
-                return false;
+
+                filter(newText);
+
+                //adapter.getFilter().filter(newText);
+                return true;
             }
         });
 
         return super.onCreateOptionsMenu(menu);
+    }
+    private  void filter(String str){
+
+        ArrayList<DownModel> temp=new ArrayList<>();
+        try {
+
+
+        for (DownModel obj:list){
+            System.out.println("Name"+obj.getDescription());
+
+            if (obj.getName().toLowerCase().contains(str.toLowerCase())){
+
+               temp.add(obj);
+           }
+        }
+        }catch (Exception e){
+            System.out.println("error"+e);
+
+        }
+        adapter.updatelist(temp);
+
+
     }
 }
