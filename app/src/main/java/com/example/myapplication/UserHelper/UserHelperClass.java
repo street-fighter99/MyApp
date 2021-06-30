@@ -1,16 +1,25 @@
 package com.example.myapplication.UserHelper;
 
 public class UserHelperClass {
-    String name, phone, bloodgroup, places;
+    String name, phone, bloodgroup, places,user;
 
     public UserHelperClass() {
     }
 
-    public UserHelperClass(String name, String phone, String bloodgroup, String places) {
+    public UserHelperClass(String name, String phone, String bloodgroup, String places, String user) {
         this.name = name;
         this.phone = phone;
         this.bloodgroup = bloodgroup;
         this.places = places;
+        this.user = user;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getName() {

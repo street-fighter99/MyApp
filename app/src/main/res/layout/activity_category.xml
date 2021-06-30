@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Category"
     android:orientation="vertical"
+    android:forceDarkAllowed="false"
+    android:background="#fff"
+
   >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_category_title"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
 
     <GridLayout
         android:layout_marginTop="30dp"
@@ -80,20 +90,26 @@
         android:columnCount="3"
         android:orientation="horizontal">
         <TextView
+            android:forceDarkAllowed="false"
             android:text="BloodBank"
             android:textSize="18dp"
             android:layout_gravity="center"
             android:layout_columnWeight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
         <TextView
+            android:forceDarkAllowed="false"
             android:text="Contacts"
             android:textSize="18dp"
             android:layout_gravity="center"
             android:layout_columnWeight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
         <TextView
+            android:forceDarkAllowed="false"
             android:text="Downloads"
             android:textSize="18dp"
+            android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_columnWeight="1"
             android:textColor="@color/black"/>
@@ -127,9 +143,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/map"
+                android:src="@drawable/website"
                 android:layout_gravity="center"
-                android:padding="15dp"/>
+                android:padding="20dp"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -160,17 +176,21 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="Maps"
+            android:forceDarkAllowed="false"
+            android:text="Website"
             android:textSize="18dp"
             android:layout_gravity="center"
             android:layout_columnWeight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
         <TextView
-            android:text="Maps"
+            android:forceDarkAllowed="false"
+            android:text="Service"
             android:textSize="18dp"
             android:layout_gravity="center"
             android:layout_columnWeight="1"
-            android:textColor="@color/black"/>
+            android:textColor="#000"
+            android:textStyle="bold"/>
 
 
     </GridLayout>

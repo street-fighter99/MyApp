@@ -6,19 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".GeneralContact"
     android:orientation="vertical"
-    android:background="#ABE8FF">
+    android:background="#FFFFFF">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+
+
         <ImageView
+            android:elevation="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/contacttitle"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:padding="10dp"/>
+
 
 
 

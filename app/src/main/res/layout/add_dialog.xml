@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="wrap_content"
-android:layout_height="600dp"
-app:cardElevation="15dp"
-app:cardCornerRadius="15dp"
-app:cardUseCompatPadding="true"
-
-    >
-<LinearLayout
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="550dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -26,7 +22,7 @@ app:cardUseCompatPadding="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/NameEditText"
+            android:id="@+id/Servicer_name"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -58,7 +54,7 @@ app:cardUseCompatPadding="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/PhoneNumberPop"
+            android:id="@+id/Servicer_phone"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -77,14 +73,14 @@ app:cardUseCompatPadding="true"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Post"
+        android:hint="Place"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/CPosition"
+            android:id="@+id/Servicer_place"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -92,52 +88,34 @@ app:cardUseCompatPadding="true"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_gravity="center"
-            android:drawableStart="@drawable/posticon"
-            android:drawableLeft="@drawable/posticon"
+            android:drawableStart="@drawable/places"
+            android:drawableLeft="@drawable/places"
             android:drawablePadding="20dp"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Ward"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Cward"
+        <Spinner
+            android:id="@+id/Servicer_service"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="30dp"
             android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:drawableStart="@drawable/wardicon"
-            android:drawableLeft="@drawable/wardicon"
-            android:drawablePadding="20dp"
-            android:inputType="text" />
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:entries="@array/service"
 
+            />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/Add_servicer_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"/>
 
-
-
-    <Button
-        android:id="@+id/AddThePerson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"/>
-
-</LinearLayout>
-
-
-
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

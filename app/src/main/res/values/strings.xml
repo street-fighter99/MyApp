@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Beta.bot</string>
 
     <array name="bloodgroup">
         <item>O Positive(O+)</item>
@@ -8,5 +8,13 @@
         <item>A Negative(A-)</item>
         <item>B Positive(B+)</item>
         <item>B Negative(B-)</item>
+    </array>
+
+    <array name="service">
+        <item>CHOOSE SERVICE</item>
+        <item>DOCTOR</item>
+        <item>VOLUNTEER</item>
+        <item>TAXI</item>
+        <item>MECHANIC</item>
     </array>
 </resources>

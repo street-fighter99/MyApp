@@ -7,16 +7,28 @@
     tools:context=".ContactProfile"
     android:orientation="vertical"
     android:background="#ABE8FF">
+    <GridLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:src="@drawable/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/backsign"/>
+    </GridLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileOfTheContact"
-        android:layout_width="217dp"
-        android:layout_height="232dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/profile"
         app:civ_border_width="1dp"
         app:civ_border_color="#fff"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="2dp"
         />
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
@@ -24,6 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -134,30 +150,35 @@
                 android:layout_gravity="center"
                 >
 
-                <ImageView
+                <Button
                     android:id="@+id/Contactcall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/calldonor"
+                    android:text="Call"
+                    android:backgroundTint="#03A9F4"
                     android:layout_margin="10dp"/>
 
-                <ImageView
-                    android:id="@+id/Contactedit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/deletedonor"
-                    android:layout_margin="10dp"/>
-                <ImageView
+                <Button
                     android:id="@+id/contactDeleter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/editdonor"
+                    android:text="Delete"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#CF2020"/>
+                <Button
+                    android:id="@+id/Contactedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upate"
+                    android:backgroundTint="#3F51B5"
                     android:layout_margin="10dp"/>
 
             </LinearLayout>
 
 
+
         </LinearLayout>
+        </ScrollView>
 
 
     </com.google.android.material.card.MaterialCardView>

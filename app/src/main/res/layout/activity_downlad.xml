@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Downlad"
     android:orientation="vertical"
-    android:background="#FFEBAB">
+    android:background="#FFFFFF">
 
 
 
@@ -22,7 +22,9 @@
             android:src="@drawable/downloadtitle"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:padding="10dp"/>
+            android:padding="2dp"
+            android:elevation="10dp"/>
+
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="Search"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
@@ -57,7 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/downrecycler"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
         />
 
 
@@ -70,14 +74,6 @@
     android:layout_alignParentEnd="true"
     android:layout_alignParentRight="true"
     android:layout_alignParentBottom="true">
-    <com.getbase.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchDown"
-        app:fab_colorNormal="#fff"
-        app:fab_title="Filter"
-        app:fab_size="mini"
-        app:fab_icon="@drawable/search"/>
 
     <com.getbase.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

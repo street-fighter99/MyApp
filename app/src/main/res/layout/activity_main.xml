@@ -16,17 +16,36 @@
         android:textStyle="bold"
         android:layout_margin="20dp"/>
 
-    <EditText
-        android:id="@+id/phoneNumberEditText"
-        android:layout_width="match_parent"
-        android:inputType="phone"
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="30dp"
-        android:hint="PhoneNumber"
-        android:textAlignment="center"
-        android:gravity="center"
-        />
+        android:layout_gravity="center"
+        android:hint="Phone Number"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/addperson"
+            android:drawableLeft="@drawable/addperson"
+            android:drawablePadding="20dp"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/submitButton"

@@ -6,30 +6,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DonorProfile"
-    android:background="@drawable/donorbackground"
+    android:background="#EDEEEF"
     android:orientation="vertical">
+    <GridLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:src="@drawable/backto"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/backsign"/>
+    </GridLayout>
+
     <TextView
         android:id="@+id/RBTextView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/round_textview"
         android:text="B+ve"
+        android:elevation="10dp"
         android:textSize="40dp"
-        android:textColor="#EC8080"
+        android:layout_gravity="center"
+        android:textColor="#03A9F4"
         android:gravity="center"
         android:fontFamily="@font/javatext"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"/>
 
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center">
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_gravity="center">
+        <LinearLayout
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -40,30 +65,32 @@
                 android:fontFamily="@font/javatext"
                 android:text="Name : "
                 android:textSize="20dp"
-                android:textColor="#EC8080"
+                android:textColor="@color/purple_700"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/NameOfThedonor"
                 android:layout_width="wrap_content"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/javatext"
                 android:text="NameOfTheDonor"
                 android:textSize="20dp"
-                android:textColor="#EC8080"/>
+                android:textColor="#121111"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/javatext"
                 android:text="Place : "
                 android:textSize="20dp"
-                android:textColor="#EC8080"
+                android:textColor="@color/purple_500"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/PlaceOfTheDonor"
@@ -72,10 +99,12 @@
                 android:fontFamily="@font/javatext"
                 android:text="PlaceOfTheDonor"
                 android:textSize="20dp"
-                android:textColor="#EC8080"/>
+                android:textStyle="bold"
+                android:textColor="#000000"/>
         </LinearLayout>
 
         <LinearLayout
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -86,7 +115,7 @@
                 android:fontFamily="@font/javatext"
                 android:text="Phone : "
                 android:textSize="20dp"
-                android:textColor="#EC8080"
+                android:textColor="@color/purple_500"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/PhoneOfTheDonor"
@@ -95,38 +124,50 @@
                 android:fontFamily="@font/javatext"
                 android:text="PhoneOfTheDonor"
                 android:textSize="20dp"
-                android:textColor="#EC8080"/>
+               android:textStyle="bold"
+                android:textColor="#050505"/>
         </LinearLayout>
         <GridLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:columnCount="3"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
             android:layout_gravity="center_horizontal"
             >
-            <ImageView
+            <Button
                 android:id="@+id/callDonor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/calldonor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Call"
+                android:backgroundTint="#03A9F4"
                 android:layout_columnWeight="1"/>
-            <ImageView
+            <Button
                 android:id="@+id/deleteDonor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/deletedonor"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#CF2020"
+                android:text="Delete"
                 android:layout_columnWeight="1"/>
-            <ImageView
+            <Button
                 android:id="@+id/editDonor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/editdonor"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Edit"
+                android:backgroundTint="#3F51B5"
                 android:layout_columnWeight="1"/>
 
         </GridLayout>
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

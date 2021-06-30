@@ -1,15 +1,25 @@
 package com.example.myapplication.UserHelper;
 
 public class ConHelper {
-    String cnNames,cnPositions,cnPhones,cnWard;
+    String cnNames,cnPositions,cnPhones,cnWard,user;
 
-    public ConHelper() { }
+    public ConHelper() {
+    }
 
-    public ConHelper(String cnNames, String cnPositions, String cnPhones, String cnWard) {
+    public ConHelper(String cnNames, String cnPositions, String cnPhones, String cnWard, String user) {
         this.cnNames = cnNames;
         this.cnPositions = cnPositions;
         this.cnPhones = cnPhones;
         this.cnWard = cnWard;
+        this.user = user;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getCnWard() {
